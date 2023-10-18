@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('tasks.index');
 });
+
+Route::get('/addTask', function () {
+    return view('tasks.addTask');
+});
+
+Route::get('/updateTask', function () {
+    return view('tasks.updateTask');
+});
