@@ -7,8 +7,9 @@
 <form class="mt-3" method="post" action="{{route('task.update')}}">
 @csrf
     <div class="form-group my-2">
-        <label for="addTask">Id</label>
-        <input disabled value ="{{$task->id}}" type="text" class="form-control" id="addTask">
+        <label>Id</label>
+        <input value ="{{$task->id}}" type="hidden" class="form-control" name="id">
+        <input disabled value ="{{$task->id}}" type="text" class="form-control">
     </div>
   <div class="form-group my-2">
     <label>Update the task</label>

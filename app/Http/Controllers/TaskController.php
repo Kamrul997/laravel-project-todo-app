@@ -39,7 +39,8 @@ class TaskController extends Controller
     }
 
     public function update(Request $request){
-        
+        // dd($request->all());
+
         $request->validate(
             [
                 'task' => 'required'
@@ -50,7 +51,7 @@ class TaskController extends Controller
         $task = tasks::find($id);
         $task->task=$request['task'];
         $task->save();
-        dd($task);
+        
         return redirect(route("todo.home"));
     }
 }
